@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: '<h1>My First Angular App</h1>'
+  moduleId: module.id,
+  selector: 'bs-app',
+  templateUrl: 'app.component.html'
 })
-export class AppComponent { }
+
+export class AppComponent {
+  pageTitle: string = "Dev Book Store"
+  searchBox: string = '';
+}
