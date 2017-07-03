@@ -22,7 +22,6 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">All Books</a></li>
-                    <li><a href="#">{{searchBox}}</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <form class="navbar-form">
@@ -38,4 +37,4 @@
         <!--/.container-fluid -->
     </nav>
 </div>
-<app-books-list></app-books-list>
+<app-books-list [searchName]="searchBox"></app-books-list>
