@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import { IBook } from '../book';
 import { BookService } from '../book.service';
 
@@ -6,7 +6,11 @@ import { BookService } from '../book.service';
     selector: 'app-books-list',
     templateUrl: 'books-list.component.html'
 })
-export class BooksListComponent implements OnInit {
+export class BooksListComponent implements OnChanges {
+
+    @Input()
+    searchName: string;
+
     books: IBook[];
     favoriteMessage = '';
     imageWidth = 100;
@@ -16,10 +20,12 @@ export class BooksListComponent implements OnInit {
 
     constructor(private bookService: BookService) { }
 
-    ngOnInit() { this.getBooks() }
+    ngOnChanges() {
+        this.getBooks();
+    }
 
     getBooks() {
-        this.bookService.getBooks()
+        this.bookService.getBooks(this.searchName)
             .subscribe(
             books => this.books = books,
             error => this.errorMessage = <any>error

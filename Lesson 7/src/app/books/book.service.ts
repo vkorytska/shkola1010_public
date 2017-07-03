@@ -9,9 +9,9 @@ export class BookService {
 
     constructor(private http: Http) { }
 
-    getBooks(): Observable<IBook[]> {
+    getBooks(nameToSearch: string): Observable<IBook[]> {
         return this.http
             .get('assets/api/books/books.json')
-            .map((response: Response) => <IBook[]>response.json());
+            .map((response: Response) => (<IBook[]>response.json()).filter(b => b.name.indexOf(nameToSearch) !== -1));
     }
 }
