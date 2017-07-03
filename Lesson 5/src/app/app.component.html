@@ -1,0 +1,11 @@
+<sign-in></sign-in>
+
+<h1>List of users</h1>
+
+<table>
+    <tr *ngFor="let user of users">
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.date_of_birth | date }}</td>
+    </tr>
+</table>
