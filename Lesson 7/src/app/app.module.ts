@@ -8,7 +8,6 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
 import { FavoriteComponent } from './favorites/favorite.component';
 import { BookService } from './books/book.service';
 import { BookFakeService } from './books/book-fake.service';
-import { AddBookComponent } from './src/app/books/add-book/add-book.component';
 
 @NgModule({
     imports: [
@@ -22,8 +21,7 @@ import { AddBookComponent } from './src/app/books/add-book/add-book.component';
         AppComponent,
         BooksListComponent,
         TruncatePipe,
-        FavoriteComponent,
-        AddBookComponent
+        FavoriteComponent
     ],
     bootstrap: [AppComponent]
 })
