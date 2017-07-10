@@ -12,16 +12,17 @@ import { BookFakeService } from './books/book-fake.service';
 import { HomeComponent } from './home/home.component';
 import { BookDetailsComponent } from './books/book-details/book-details.component';
 import { AppRoutes } from './app.routes';
+import { EverySecondGuard } from './shared/guards/every-second.guard';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(AppRoutes)
+        RouterModule.forRoot(AppRoutes, { enableTracing: true })
     ],
     // providers: [{ provide: BookService, useClass: BookFakeService }],
-    providers: [BookService],
+    providers: [BookService, EverySecondGuard],
     declarations: [
         AppComponent,
         BooksListComponent,
