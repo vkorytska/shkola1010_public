@@ -10,15 +10,7 @@
                         <h2>{{book.name}}</h2>
                         <div class="price text-success">{{book.price}}</div>
 
-                        <p>Quanity:
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select></p>
-                        <a href="#" class="btn btn-success">Buy Now</a>
+                        <a class="btn btn-success" [routerLink]="['buy']">Buy Now</a>
                         <br><br><br>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">

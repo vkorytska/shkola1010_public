@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -13,20 +14,26 @@ import { HomeComponent } from './home/home.component';
 import { BookDetailsComponent } from './books/book-details/book-details.component';
 import { AppRoutes } from './app.routes';
 import { EverySecondGuard } from './shared/guards/every-second.guard';
+import { FormBuyBookComponent } from './books/form-buy-book/form-buy-book.component';
 
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule,
+        //FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         RouterModule.forRoot(AppRoutes, { enableTracing: true })
     ],
     // providers: [{ provide: BookService, useClass: BookFakeService }],
-    providers: [BookService, EverySecondGuard],
+    providers: [
+        BookService,
+        EverySecondGuard
+    ],
     declarations: [
         AppComponent,
         BooksListComponent,
         BookDetailsComponent,
+        FormBuyBookComponent,
         TruncatePipe,
         FavoriteComponent,
         HomeComponent
