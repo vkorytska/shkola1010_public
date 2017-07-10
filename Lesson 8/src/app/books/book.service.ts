@@ -28,4 +28,11 @@ export class BookService {
                 .filter(b => !nameToSearch || b.name.toUpperCase().indexOf(nameToSearch.toUpperCase()) !== -1))
             .delay(500);
     }
+
+    getBook(id: string) {
+        return this.http
+            .get('assets/api/books/books.json')
+            .map((response: Response) => (<IBook[]>response.json()).find(b => b.id === id))
+            .delay(500);
+    }
 }
