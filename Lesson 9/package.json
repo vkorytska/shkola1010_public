@@ -9,7 +9,9 @@
     "test": "ng test",
     "scss-lint": "node ./node_modules/sass-lint/bin/sass-lint.js -c .sass-lint.yml -v -q",
     "lint": "npm run scss-lint && ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "generate-i18n": "ng xi18n --output-path src/i18n",
+    "serve-i18n": "ng serve --aot --i18n-file=src/i18n/messages.ua.xlf --locale=ua --i18n-format=xlf -o"
   },
   "private": true,
   "dependencies": {
