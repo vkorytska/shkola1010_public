@@ -18,7 +18,11 @@ a {
     margin-bottom: 20px;
     margin-top: 30px;
     background: url(./assets/images/navbar.png) repeat-x #0383c0;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+
+    &:hover {
+        border: 1px solid black;
+    }
 }
 
 .navbar-default .navbar-nav a.active,
@@ -47,13 +51,15 @@ a {
     margin: 10px 0 0 45px
 }
 
-header form {
-    float: right;
-    margin-top: 30px;
-    background: #FF9721;
-    padding: 15px;
-    color: #fff;
-    border-radius: 5px
+header {
+    form {
+        float: right;
+        margin-top: 30px;
+        background: #FF9721;
+        padding: 15px;
+        color: #fff;
+        border-radius: 5px
+    }
 }
 
 #products img {
