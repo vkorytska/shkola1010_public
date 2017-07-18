@@ -2,21 +2,13 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="319e0745bcbc132451569294fa2fa21bf10f555a" datatype="html">
-        <source>Toggle navigation</source>
-        <target>Toggle navigation</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app\app.component.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+      <trans-unit id="homeLink" datatype="html">
         <source>Home</source>
         <target>Home</target>
-        <context-group purpose="location">
+        <!-- <context-group purpose="location">
           <context context-type="sourcefile">app\app.component.ts</context>
           <context context-type="linenumber">23</context>
-        </context-group>
+        </context-group> -->
       </trans-unit>
       <trans-unit id="6c79238d3d314985ae3bfed3719b60a438a3a83a" datatype="html">
         <source>All books</source>

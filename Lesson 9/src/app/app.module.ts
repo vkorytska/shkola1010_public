@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -19,10 +19,10 @@ import { FormBuyBookComponent } from './books/form-buy-book/form-buy-book.compon
 @NgModule({
     imports: [
         BrowserModule,
-        //FormsModule,
+        // FormsModule,
         ReactiveFormsModule,
         HttpModule,
-        RouterModule.forRoot(AppRoutes, { enableTracing: true })
+        RouterModule.forRoot(AppRoutes)
     ],
     // providers: [{ provide: BookService, useClass: BookFakeService }],
     providers: [
