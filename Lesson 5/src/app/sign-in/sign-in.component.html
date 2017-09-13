@@ -1,8 +1,0 @@
-<div *ngIf="!user; else signedIn">
-    <button (click)="signIn()">sign in</button>
-</div>
-
-<ng-template #signedIn>
-    <div>Hi, {{ user.first_name }} {{ user.last_name }}</div>
-    <button (click)="signOut()">sign out</button>
-</ng-template>
