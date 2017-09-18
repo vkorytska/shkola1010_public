@@ -9,8 +9,13 @@
 					<button class="btn btn-primary center-block" (click)='toggleImage()'>
 						{{ showImage ? 'Hide Image' : 'Show Image'}}
 					</button>
-					<h4><a>{{book.bookTitle}}</a></h4>
-					<p myHighlight="green"><b>Author: </b>{{book.bookAuthor}}</p>
+					<h4>
+						<a>{{ book.bookTitle }}</a>
+					</h4>
+					<p myHighlight="green">
+						<b>Author: </b>{{ book.bookAuthor }}</p>
+					<p>
+						<b>Size: </b>{{ book.size | bytes }}</p>
 					<app-favorite [favorite]="book.bookTitle" (favoriteClicked)="onFavoriteClicked($event)"></app-favorite>
 				</div>
 			</div>
