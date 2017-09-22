@@ -7,6 +7,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { BytesPipe } from './pipes/bytes.pipe';
+import { HttpModule } from '@angular/http';
+import { BooksService } from './services/books.service';
 
 @NgModule({
     declarations: [
@@ -19,8 +21,9 @@ import { BytesPipe } from './pipes/bytes.pipe';
     ],
     imports: [
         BrowserModule,
+        HttpModule
     ],
-    providers: [],
+    providers: [BooksService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
